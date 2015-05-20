@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+   <div class="centre">
+       <center><h1>Todo.com</h1></center>
+       <h2>A faire :</h2><br>
+    <ul> 
+        {% for entity in entities %}
+            <li>  <a href="{{ path('tache_show', { 'id': entity.id }) }}">{{ entity.libelle }}</a></li> 
+               
+        {% endfor %}
+        
+</ul>
+        
+         <a href="{{ path('tache_new') }}">  <img src={{ asset('bundles/main/img/icone.png') }}></a>
+            </div>
+    {% endblock %}

@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <div class="centre">
+       <center><h1>Modifier tâche</h1></center>
+ <div id="notreformulaire">
+     {{ form(edit_form) }}</div>
+
+       <br><br>
+   
+        <a href="{{ path('tache') }}">
+             <img src={{ asset('bundles/main/img/back.png') }}>
+     </a>
+    
+   
+        </ul></div>
+{% endblock %}

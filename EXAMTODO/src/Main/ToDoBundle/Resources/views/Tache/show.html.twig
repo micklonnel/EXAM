@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <div class="centre">
+       <center><h1>Todo.com</h1></center>
+       <h2>{{ entity.libelle }} :</h2> <p>{{ entity.description }}</p>
+      
+       <p>A faire avant le: </p> <h3>{{ entity.date|date('d-m-Y / H:i:s') }}</h3>
+        <a href="{{ path('tache_edit', { 'id': entity.id }) }}">
+           <img src={{ asset('bundles/main/img/edit.png') }}>
+        </a>
+    
+     <a href="{{ path('tache') }}">
+             <img src={{ asset('bundles/main/img/back.png') }}>
+     </a><br><br>
+     <p font-size="10px"> CopyRight...</p> </div>
+   
+{% endblock %}
